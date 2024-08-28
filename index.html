@@ -1,12 +1,118 @@
 <!DOCTYPE html>
-<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rell="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-----Header----->
+    <header>
+        <div class="header wrapper"></div>
+        <div class="logo-icon">
+            <img src="https://1.bp.blogspot.com/-vVS34SwFWFI/WjCSXpKb0BI/AAAAAAAAF6Y/HjlGqQNtBq0HPFQUFzd2CE0DD6a0i30xwCLcBGAs/s1600/Unpam.png" height="70" width="70"/>
+        </div>
+        <section class="nav-container">
+            <a href="#home-section" class="nav-item"> Home</a>
+            <a href="#profile-section" class="nav-item"> Profile</a>
+            <a href="#facility-section" class="nav-item"> Facilitation</a>
+            <a href="#message-section" class="nav-item"> Message Us</a>
+        </section>
+    </header>
+    <hr  />
+
+
+    <!-----Slideshow----->
+    <main>
+        <article id="home-section">
+            <h1> Welcome User, to Universitas Pamulang Website</h1>
+            <p> Universitas Pamulang disingkat UNPAM adalah salah satu perguruan tinggi swasta terbesar di Banten. Universitas Pamulang merupakan perguruan tinggi yang dikelola oleh Yayasan Sasmita Jaya yang didirikan oleh Dr. (H.C) H. Darsono.
+             Tujuan dari Yayasan Sasmita Jaya adalah mewujudkan suatu sarana pendidikan yang murah dan terjangkau oleh seluruh lapisan masyarakat tanpa melupakan kualitas dari pendidikan itu sendiri.
+             Oleh karena itu Universitas Pamulang selalu mengangkat tenaga-pengajar dan staff administrasi yang berkompeten di bidangnya.</p>
+            <div class="banner-img">
+                <img class="img-slideshow" src="https://th.bing.com/th/id/OIP.z-2k85jXtm1-uEOxev077AHaEb?rs=1&pid=ImgDetMain"/>
+                <img class="img-slideshow" src="https://perkuliahankaryawan.com/wp-content/uploads/2021/10/UNPAM.jpg"/>
+                <img class="img-slideshow" src="https://tangselife.com/wp-content/uploads/2022/11/CBDBCD3B-8189-4B40-81FA-BDBA14377E98.jpeg"/>
+                <img class="img-slideshow" src="https://i.ytimg.com/vi/5SzBtTEX3JQ/maxresdefault.jpg"/>
+                <button onclick="plusDivs(-1)">Previous</button>
+                <button onclick="plusDivs(1)">Next</button>
+            </div>
+        </article>
+        <hr />
+
+        <!-----Facility----->
+        <section id="facility-section">
+                <h1> Universitas Pamulang Facilitation </h1>
+        </section>
+        <section class="profile-container">
+            <div class="profile-item">
+                <div class="profile-img">
+                <img src="https://th.bing.com/th/id/OIP.hrPTzAmkdNJziMXTKzXoFAHaEJ?rs=1&pid=ImgDetMain" height="100" width="100"/>
+                </div>
+                <h2>Taman Diskusi</h2>
+            </div>
+            <div class="profile-item">
+                <div class="profile-img">
+                <img src="https://perpustakaan.unpam.ac.id/wp-content/uploads/2022/03/Snapseed-36-scaled.jpg" height="100" width="100"/>
+                </div>
+                <h2>Perpustakaan Bersama</h2>
+            </div>
+            <div class="profile-item">
+                <div class="profile-img"></div>
+                <img src="https://perpustakaan.unpam.ac.id/wp-content/uploads/2022/04/Snapseed-53-scaled.jpg" height="100" width="100"/>
+                <h2>Ruang Lab yang Memadai</h2>
+            </div>
+            <div class="profile-item">
+                <div class="profile-img"></div>
+                <img src="https://awsimages.detik.net.id/community/media/visual/2021/04/23/masjid-unpam-masjid-ramah-lingkungan-yang-sejuk-meski-tanpa-ac-9_169.jpeg?w=700&q=90" height="100" width="100"/>
+                <h2>Tempat Ibadah Masjid</h2>
+            </div>
+        </section>
+    </main>
+    <hr  />
+
+    <!----- Form Data Diri ----->
+<section class="personal-data" id="message-section">
+        <h1>Message Us</h1>
+    <form id="personalDataForm">
+        <label for="fullName">Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Pilih...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        
+        <label for="messages">Messages:</label>
+        <textarea id="messages" name="messages" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
     
+    <div id="formResults" style="display:none;">
+        <h2>Hasil Pengisian Form:</h2>
+        <p><strong>Name:</strong> <span id="resultName"></span></p>
+        <p><strong>Email:</strong> <span id="resultEmail"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="resultDob"></span></p>
+        <p><strong>Gender:</strong> <span id="resultGender"></span></p>
+        <p><strong>Messages:</strong> <span id="resultMessages"></span></p>
+    </div>
+</section>
+
+    <!--Footer-->
+    <hr  />
+    <footer>
+        <p><b> Web Design by Ferry Andika Firmansyah</p>
+    </footer>
+<script src="js/script.js"></script>
 </body>
 </html>
